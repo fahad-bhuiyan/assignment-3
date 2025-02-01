@@ -32,11 +32,33 @@
       </script>
     <!-- DaisyUi -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .text-effect {
+        background: linear-gradient(90deg, #ff6a00, #ee0979, #1d2671, #009ffd);
+        background-size:300% 300%;
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        animation: gradient-shift 3s infinite linear;
+      }
+
+      @keyframes gradient-shift {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+    </style>   
 </head>
 <body>
     <header class="bg-gradient-to-r from-white to-[#EFEBE3] mb-[140px]">
-        <nav class="md:mx-[135px] mb-[90px]">
+        <nav class="md:mx-[135px] mb-[90px] md:border-none border-b-[1px] border-green-500">
               <div class="navbar">
                 <div class="mr-[100px]">
                   <img src="assets/logo-header.png" alt="logo">
@@ -61,8 +83,7 @@
         </nav>
         <div>
             <h1 class="text-center font-semibold text-[32px] md:text-[56px] mb-8">
-                Freshness <span class="text-green-600">You Can</span><br>
-                <span class="text-green-600">Count</span> On, Prices You’ll Love!
+                <span class="text-effect">Freshness You Can Count On</span><br> Prices You’ll Love!
             </h1>
             <p class="text-[20px] text-[#111111] text-center mb-[37px]">
                 Shop your daily essentials at unbeatable prices. From fresh produce to pantry<br> staples, we’ve got you covered every day!
